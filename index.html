@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.U T.E A.M.O</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', normal;
+        transition: .5s all;
+    }
+
+    body {
+        min-height: 100vh;
+        background-color: #FF6961;
+    }
+
+    div.amor {
+        font-size: 20px;
+        padding: 50px;
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.amor > span{
+        opacity: 0;
+        Transform: translateX(-40px);
+    }
+
+    div.amor > span.odio{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    div.texto {
+        padding: 20px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.texto > p {
+        
+    }
+</style>
+</head>
+<body>
+    <div class="amor" amor="Dedico esse site ao grande amor da minha vida, para sempre nós, nós contra o mundo.. Te amo minha vida. By:Seu grande amor">
+        <span>Via de regra, todos ao longo da vida ficam sozinhos,</span>
+        <span>chegamos a um ponto de necessitarmos de um lugar pra chamar de lar,</span>
+        <span>alguem pra chamar de amor,</span>
+        <span>e pessoas pra chamar de família.</span>
+        <span>Acho q eu encontrei alguem q eu posso ter todas essas coisas..</span>
+      </div>
+      <div class="texto">
+        <p>Hoje, dia 17/06 a gente intera 2 mesês juntos, nunca fui bom de falar, mas vou tentar ser breve.
+      Estou muito feliz de estar mais um mês com vc ao seu lado, um mês que ao msm tempo q parece q chegou rapido, parece tbm q ezu ja estou a um ano do seu lado. Isso me anima, pq mostra q cada momento com vc esta sendo aproveitado, dias, noites e momentos que passei com vc, foram e sempre serão os melhores da minha vida. Você é muito especial pra mim e tudo q eu quero e preciso. Te amo! By:JP.</p>
+      </div>
+</body>
+<script>
+    const estrofes = document.querySelectorAll('div.amor > span')
+    estrofes.forEach((ele, ind) => {
+         setTimeout(() => {
+             ele.classList.add('odio')
+            console.log(ind)
+        }, ind * 1500)
+    })  
+</script>
+</html>
